@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="theme-color" content="#2a2d3b">
+    <meta name="description" content="A responsive To-Do List application to manage your tasks">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="statContainer">
+                <div class="details">
+                    <h1>Your To-Do List</h1>
+                    <div class="progressBar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+                <div class="stat-no">
+                    <p id="number" aria-live="polite">0 / 0</p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <form id="taskForm" novalidate>
+                <div class="input-container">
+                    <input 
+                        type="text" 
+                        id="taskInput"  
+                        placeholder="Add a task"
+                        aria-label="Enter a new task"
+                        autocomplete="off"
+                        maxlength="100"
+                        required>
+                    <button type="submit" id="newTask" aria-label="Add task">+</button>
+                </div>
+            </form>
+            
+            <ul class="task-list" id="taskList" aria-live="polite">
+                <!-- Tasks will be added here dynamically -->
+            </ul>
+        </main>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
